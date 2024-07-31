@@ -1,61 +1,43 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
+// Card.astro
+export interface Props {
+    projectTitle: string;
+    projectFrontPage: string;
+    projectSkills: string[];
+    projectLink: string;
 }
-
-const { href, title, body } = Astro.props;
+const {
+    projectTitle,
+    projectFrontPage,
+    projectSkills = [],
+    projectLink,
+} = Astro.props as Props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+<a href={projectLink} target="_blank"
+    class="hover:scale-110 transition duration-300 ease-in-out group relative m-0 flex rounded-xl shadow-xl ring-gray-900/5 cursor-pointer"
+>
+    <div
+        class="z-10 overflow-hidden rounded-xl border border-gray-200 opacity-80 dark:border-gray-700 dark:opacity-70"
+    >
+        <img
+            src={projectFrontPage}
+            class="animate-fade-in block transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
+            alt="projectFrontPage"
+        />
+    </div>
+    <div
+        class="absolute bottom-0 z-20 mb-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110"
+    >
+        <h1 class="font-serif text-2xl font-bold text-white shadow-xl mb-1">
+            {projectTitle}
+        </h1>
+        <div class="flex gap-3">
+            {
+                projectSkills.map((skill) => (
+                    <img class="h-5" src={skill} alt="projectSkill" />
+                ))
+            }
+        </div>
+    </div>
+</a>

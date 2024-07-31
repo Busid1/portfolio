@@ -1,0 +1,24 @@
+---
+// Importa el componente Buttons
+import Button from './Button.astro';
+import SectionHeader from './SectionHeader.astro';
+---
+
+<div class="flex flex-col w-full py-36" id="skills">
+  <SectionHeader text="My Skills"/>
+  
+  <!-- Usa el componente Buttons con diferentes textos -->
+   <div class="flex xs:gap-5 sm:gap-10 flex-wrap w-full justify-evenly">
+       <Button text="HTML" />
+       <Button text="CSS" />
+       <Button text="JavaScript" />
+       <Button text="React" />
+       <Button text="Redux" />
+       <Button text="Bootstrap" />
+       <Button text="Astro" />
+       <Button text="Netbeans" />
+       <Button text="MongoDB" />
+       <Button text="Firebase" />
+       <Button text=".git" />
+   </div>
+</div>
