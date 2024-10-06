@@ -5,39 +5,56 @@ export interface Props {
     projectFrontPage: string;
     projectSkills: string[];
     projectLink: string;
+    projectDescription: string;
 }
 const {
     projectTitle,
     projectFrontPage,
     projectSkills = [],
     projectLink,
+    projectDescription,
 } = Astro.props as Props;
 ---
 
-<a href={projectLink} target="_blank"
-    class="hover:scale-110 transition duration-300 ease-in-out group relative m-0 flex rounded-xl shadow-xl ring-gray-900/5 cursor-pointer"
+<div
+    class="m-0 flex-col rounded-xl shadow-xl dark:bg-gray-900 transition duration-200 p-3"
 >
-    <div
-        class="z-10 overflow-hidden rounded-xl border border-gray-200 opacity-80 dark:border-gray-700 dark:opacity-70"
-    >
+    <a href={projectLink} target="_blank" class="relative z-10 group">
         <img
             src={projectFrontPage}
-            class="animate-fade-in block transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
+            class="animate-fade-in block transform object-contain object-top opacity-100 transition duration-200 group-hover:rounded-xl group-hover:scale-110 rounded-xl"
             alt="projectFrontPage"
         />
-    </div>
-    <div
-        class="absolute bottom-0 z-20 mb-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110"
-    >
-        <h1 class="font-serif text-2xl font-bold text-white shadow-xl mb-1">
+        <div
+            class="absolute opacity-0 transition duration-300 ease-in-out group-hover:scale-110 group-hover:opacity-100 flex items-center justify-center w-full h-full top-0 z-30 bg-indigo-600 bg-opacity-10 rounded-xl"
+        >
+            <div
+                class="flex items-center justify-center text-white font-bold text-3xl"
+            >
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+        </div>
+    </a>
+    <div class="block p-6 rounded-b-md w-full max-sm:p-3">
+        <a
+            href={projectLink}
+            target="_blank"
+            class="text-2xl font-bold hover:underline text-gray-900 dark:text-white"
+        >
             {projectTitle}
-        </h1>
-        <div class="flex gap-3">
-            {
-                projectSkills.map((skill) => (
-                    <img class="h-5" src={skill} alt="projectSkill" />
-                ))
-            }
+        </a>
+        <p class="mt-2 font-normal text-gray-700 dark:text-gray-400">
+            {projectDescription}
+        </p>
+        <div class="flex-col gap-3 mt-3">
+            <span class="text-white font-medium">Tecnologías empleadas:</span>
+            <div class="flex flex-wrap gap-3 mt-3">
+                {
+                    projectSkills.map((skill) => (
+                        <img class="h-5" src={skill} alt="projectSkill" />
+                    ))
+                }
+            </div>
         </div>
     </div>
-</a>
+</div>

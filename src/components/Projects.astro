@@ -3,12 +3,13 @@ import Card from "./Card.astro";
 import SectionHeader from "./SectionHeader.astro";
 ---
 
-<div class="flex flex-col" id="projects">
-	<SectionHeader text="Proyectos"/>
-	<div class="flex flex-col gap-20 sm:px-0">
+<div class="flex flex-col xs:pt-5 sm:pt-10" id="projects">
+	<SectionHeader text="Proyectos" />
+	<div class="flex flex-col gap-x-5 gap-y-5">
 		<Card
 			projectTitle="GameVortex"
 			projectFrontPage="/gamevortex.png"
+			projectDescription="E-commerce de videojuegos, desarrollado con React y gestionado con Redux. Consume una API REST para la interacción con los datos, mientras que los usuarios y la información de productos se almacenan en Cloud Firestore. Además, los pagos se procesan mediante la integración de Stripe."
 			projectSkills={[
 				"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1024px-React.svg.png",
 				"https://static-00.iconduck.com/assets.00/redux-icon-2048x1945-ahvhunxp.png",
@@ -17,33 +18,39 @@ import SectionHeader from "./SectionHeader.astro";
 				"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png",
 				"https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png",
 				"https://static-00.iconduck.com/assets.00/firebase-icon-1492x2048-zznoc9pm.png",
+				"https://images.stripeassets.com/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg?q=80&w=1082",
 			]}
 			projectLink="https://gamevortex-7eca9.web.app/"
 		/>
-		<Card
-			projectTitle="UniCourse"
-			projectFrontPage="/uni-course.png"
-			projectSkills={[
-				"https://vitejs.dev/logo.svg",
-				"https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png",
-				"https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png",
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png",
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png",
-				"https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png",
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
-			]}
-			projectLink="https://tienda-universae.onrender.com"
-		/>
-		<Card
-			projectTitle="UniLauncher"
-			projectFrontPage="/uni-launcher.png"
-			projectSkills={[
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/1776px-Apache_NetBeans_Logo.svg.png",
-				"https://cdn-icons-png.flaticon.com/512/226/226777.png",
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1024px-JSON_vector_logo.svg.png"
-			]}
-			projectLink="/uni-launcher-video.mp4"
-		/>
+		<div class="flex max-sm:flex-col gap-5">
+			<Card
+				projectTitle="Tienda Universae"
+				projectFrontPage="/uni-course.png"
+				projectDescription="Plataforma de compraventa de cursos en línea, desarrollada con Vite y gestionada mediante GitHub para el control de versiones y la colaboración en equipo."
+				projectSkills={[
+					"https://vitejs.dev/logo.svg",
+					"https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png",
+					"https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png",
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png",
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png",
+					"https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png",
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+					"https://images.stripeassets.com/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg?q=80&w=1082",
+				]}
+				projectLink="https://tienda-universae.onrender.com"
+			/>
+			<Card
+				projectTitle="UniLauncher"
+				projectDescription="Launcher de cursos desarrollado en Java con NetBeans, utilizando un archivo JSON como base de datos."
+				projectFrontPage="/uni-launcher.png"
+				projectSkills={[
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/1776px-Apache_NetBeans_Logo.svg.png",
+					"https://cdn-icons-png.flaticon.com/512/226/226777.png",
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1024px-JSON_vector_logo.svg.png",
+				]}
+				projectLink="/uni-launcher-video.mp4"
+			/>
+		</div>
 	</div>
 </div>
 
