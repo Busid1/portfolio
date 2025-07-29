@@ -7,18 +7,44 @@ import SectionHeader from "./SectionHeader.astro";
 	<SectionHeader text="Proyectos" />
 	<div class="flex flex-col gap-x-5 gap-y-5">
 		<Card
+			projectTitle="App de reserva de citas - Bookly"
+			projectFrontPage="/bookly.png"
+			projectDescription="Página creada para reservar citas facilitando tanto al cliente como al dueño una gestión y administración de citas más ordenada y eficiente almacenando estas citas tanto en la web como en el calendario de Google."
+			projectSkills={[
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+				"https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg",
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/2048px-Google_Calendar_icon_%282020%29.svg.png",
+			]}
+			projectSkillsName={[
+				"Angular",
+				"TypeScript",
+				"PostgreSQL",
+				"NestJS",
+				"Tailwind CSS",
+				"Google Calendar API",
+			]}
+			projectLink="https://bookly-39896.web.app/"
+		/>
+		<Card
 			projectTitle="GameVortex"
 			projectFrontPage="/gamevortex.png"
 			projectDescription="E-commerce de videojuegos, desarrollado con React y gestionado con Redux. Consume una API REST para la interacción con los datos, mientras que los usuarios y la información de productos se almacenan en Cloud Firestore. Además, los pagos se procesan mediante la integración de Stripe."
 			projectSkills={[
 				"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1024px-React.svg.png",
-				"https://static-00.iconduck.com/assets.00/redux-icon-2048x1945-ahvhunxp.png",
-				"https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png",
+				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
+				"https://brandeps.com/logo-download/F/Firebase-logo-02.png",
 				"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png",
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png",
-				"https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png",
-				"https://static-00.iconduck.com/assets.00/firebase-icon-1492x2048-zznoc9pm.png",
 				"https://images.stripeassets.com/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg?q=80&w=1082",
+			]}
+			projectSkillsName={[
+				"React",
+				"JavaScript",
+				"Firebase",
+				"Bootstrap",
+				"Stripe",
 			]}
 			projectLink="https://gamevortex-7eca9.web.app/"
 		/>
@@ -29,26 +55,33 @@ import SectionHeader from "./SectionHeader.astro";
 				projectDescription="Plataforma de compraventa de cursos en línea, desarrollada con Vite y gestionada mediante GitHub para el control de versiones y la colaboración en equipo."
 				projectSkills={[
 					"https://vitejs.dev/logo.svg",
-					"https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png",
-					"https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png",
 					"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png",
-					"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png",
-					"https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png",
 					"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
 					"https://images.stripeassets.com/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg?q=80&w=1082",
+					"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
+					"https://cdn.worldvectorlogo.com/logos/mongodb-icon-1-1.svg",
+				]}
+				projectSkillsName={[
+					"Vite",
+					"Bootstrap",
+					"Git",
+					"Stripe",
+					"JavaScript",
+					"MongoDB",
 				]}
 				projectLink="https://tienda-universae.onrender.com"
 			/>
 			<Card
-				projectTitle="UniLauncher"
-				projectDescription="Launcher de cursos desarrollado en Java con NetBeans, utilizando un archivo JSON como base de datos."
-				projectFrontPage="/uni-launcher.png"
+				projectTitle="CutLink"
+				projectDescription="Su función es simple, introduce un enlace largo en el campo, haz click en el boton shorten y este te proporciona un enlace más corto que te redirigira al mismo sitio que el enlace largo"
+				projectFrontPage="/cutlink.png"
 				projectSkills={[
-					"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/1776px-Apache_NetBeans_Logo.svg.png",
-					"https://cdn-icons-png.flaticon.com/512/226/226777.png",
-					"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1024px-JSON_vector_logo.svg.png",
+					"https://www.svgrepo.com/show/354113/nextjs-icon.svg",
+					"https://cdn.worldvectorlogo.com/logos/mongodb-icon-1-1.svg",
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
 				]}
-				projectLink="/uni-launcher-video.mp4"
+				projectSkillsName={["Next.js", "MongoDB", "TypeScript"]}
+				projectLink="https://cut-ly.vercel.app/"
 			/>
 		</div>
 	</div>

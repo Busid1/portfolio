@@ -4,6 +4,7 @@ export interface Props {
     projectTitle: string;
     projectFrontPage: string;
     projectSkills: string[];
+    projectSkillsName: string[];
     projectLink: string;
     projectDescription: string;
 }
@@ -11,13 +12,14 @@ const {
     projectTitle,
     projectFrontPage,
     projectSkills = [],
+    projectSkillsName = [],
     projectLink,
     projectDescription,
 } = Astro.props as Props;
 ---
 
 <div
-    class="m-0 flex-col rounded-xl shadow-xl dark:bg-gray-900 transition duration-200 p-3"
+    class="m-0 flex-col rounded-xl shadow-xl dark:bg-gray-900 transition duration-200 p-4"
 >
     <a href={projectLink} target="_blank" class="relative z-10 group">
         <img
@@ -35,7 +37,7 @@ const {
             </div>
         </div>
     </a>
-    <div class="block p-6 rounded-b-md w-full max-sm:p-3">
+    <div class="block py-4 px-2 rounded-b-md w-full">
         <a
             href={projectLink}
             target="_blank"
@@ -50,8 +52,11 @@ const {
             <span class="text-white font-medium">Tecnologías empleadas:</span>
             <div class="flex flex-wrap gap-3 mt-3">
                 {
-                    projectSkills.map((skill) => (
-                        <img class="h-5" src={skill} alt="projectSkill" />
+                    projectSkills.map((skill, index) => (
+                        <button class="flex items-center gap-x-2 rounded-md px-4 py-1.5 bg-indigo-800 hover:bg-indigo-700 transition shadow">
+                            <img class="h-4" src={skill} alt={`${projectSkillsName[index]}-logo`} />
+                            <span class="text-white font-medium text-sm">{projectSkillsName[index]}</span>
+                        </button>
                     ))
                 }
             </div>
