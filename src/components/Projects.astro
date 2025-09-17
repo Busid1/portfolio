@@ -7,6 +7,24 @@ import SectionHeader from "./SectionHeader.astro";
 	<SectionHeader text="Proyectos" />
 	<div class="flex flex-col gap-x-5 gap-y-5">
 		<Card
+			projectTitle="Optimizador de CV con IA - PerfectCV AI"
+			projectFrontPage="/perfectcv-ai-mockup.png"
+			projectDescription="Su función es simple, subes tu CV, añades la descripción del trabajo al que quieres postularte y la IA optimiza tu CV para que se ajuste mejor a la oferta de trabajo."
+			projectSkills={[
+				"https://www.svgrepo.com/show/354113/nextjs-icon.svg",
+				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
+				"https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/openai-icon.png",
+			]}
+			projectSkillsName={[
+				"Next.js",
+				"JavaScript",
+				"Tailwind CSS",
+				"OpenAI API",
+			]}
+			projectLink="https://perfectcv-ai.vercel.app"
+		/>
+		<Card
 			projectTitle="App de reserva de citas - Bookly"
 			projectFrontPage="/bookly-mockup.png"
 			projectDescription="Página creada para reservar citas facilitando tanto al cliente como al dueño una gestión y administración de citas más ordenada y eficiente almacenando estas citas tanto en la web como en el calendario de Google."
@@ -28,27 +46,27 @@ import SectionHeader from "./SectionHeader.astro";
 			]}
 			projectLink="https://bookly-39896.web.app/"
 		/>
-		<Card
-			projectTitle="GameVortex"
-			projectFrontPage="/gamevortex-mockup.png"
-			projectDescription="E-commerce de videojuegos, desarrollado con React y gestionado con Redux. Consume una API REST para la interacción con los datos, mientras que los usuarios y la información de productos se almacenan en Cloud Firestore. Además, los pagos se procesan mediante la integración de Stripe."
-			projectSkills={[
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1024px-React.svg.png",
-				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
-				"https://brandeps.com/logo-download/F/Firebase-logo-02.png",
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png",
-				"https://images.stripeassets.com/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg?q=80&w=1082",
-			]}
-			projectSkillsName={[
-				"React",
-				"JavaScript",
-				"Firebase",
-				"Bootstrap",
-				"Stripe",
-			]}
-			projectLink="https://gamevortex-7eca9.web.app/"
-		/>
 		<div class="flex max-sm:flex-col gap-5">
+			<Card
+				projectTitle="GameVortex"
+				projectFrontPage="/gamevortex-mockup.png"
+				projectDescription="E-commerce de videojuegos, desarrollado con React y gestionado con Redux. Consume una API REST para la interacción con los datos, mientras que los usuarios y la información de productos se almacenan en Cloud Firestore. Además, los pagos se procesan mediante la integración de Stripe."
+				projectSkills={[
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1024px-React.svg.png",
+					"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
+					"https://brandeps.com/logo-download/F/Firebase-logo-02.png",
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png",
+					"https://images.stripeassets.com/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg?q=80&w=1082",
+				]}
+				projectSkillsName={[
+					"React",
+					"JavaScript",
+					"Firebase",
+					"Bootstrap",
+					"Stripe",
+				]}
+				projectLink="https://gamevortex-7eca9.web.app/"
+			/>
 			<Card
 				projectTitle="CutLink"
 				projectDescription="Su función es simple, introduce un enlace largo en el campo, haz click en el boton shorten y este te proporciona un enlace más corto que te redirigira al mismo sitio que el enlace largo"
@@ -64,5 +82,3 @@ import SectionHeader from "./SectionHeader.astro";
 		</div>
 	</div>
 </div>
-
-<style></style>
