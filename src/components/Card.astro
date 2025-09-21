@@ -46,7 +46,7 @@ const {
             >
                 {projectTitle}
             </a>
-            <p class="mt-2 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mt-2 font-normal text-gray-400">
                 {projectDescription}
             </p>
         </div>
@@ -55,9 +55,9 @@ const {
             <div class="flex flex-wrap gap-3 mt-3">
                 {
                     projectSkills.map((skill, index) => (
-                        <button class="flex items-center gap-x-2 rounded-md px-4 py-1.5 bg-indigo-800 hover:bg-indigo-700 transition shadow">
+                        <button class="flex items-center max-sm:flex-1 gap-x-2 rounded-md px-4 py-1.5 bg-indigo-800 hover:bg-indigo-700 transition shadow">
                             <img class="h-4" src={skill} alt={`${projectSkillsName[index]}-logo`} />
-                            <span class="text-white font-medium text-sm">{projectSkillsName[index]}</span>
+                            <span class="text-white font-medium text-sm truncate">{projectSkillsName[index]}</span>
                         </button>
                     ))
                 }
