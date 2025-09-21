@@ -1,25 +1,23 @@
 <header class="flex justify-center w-full mx-auto mt-2">
-  <nav class="flex justify-center mx-3" id="headerNav">
-    <div class="sm:px-3 lg:px-6">
-      <div class="relative flex h-12 items-center justify-center">
-        <div class="flex flex-1 items-center justify-evenly">
-          <div class="flex justify-evenly items-center w-full" id="navSections">
-            <a
-              href="#experience"
-              class="rounded-full px-4 py-2 sm:text-lg font-medium xs:text-sm text-gray-300 hover:bg-gray-900 hover:text-white"
-              >Experiencia</a
-            >
-            <a
-              href="#projects"
-              class="rounded-full px-4 py-2 sm:text-lg font-medium xs:text-sm text-gray-300 hover:bg-gray-900 hover:text-white"
-              >Proyectos</a
-            >
-            <a
-              href="#contact"
-              class="rounded-full px-4 py-2 sm:text-lg font-medium xs:text-sm text-gray-300 hover:bg-gray-900 hover:text-white"
-              >Contacto</a
-            >
-          </div>
+  <nav class="flex justify-center" id="headerNav">
+    <div class="relative flex h-12 items-center justify-center">
+      <div class="flex flex-1 items-center justify-evenly">
+        <div class="flex justify-evenly items-center w-full" id="navSections">
+          <a
+            href="#experience"
+            class="rounded-full max-sm:px-2 px-4 py-2 sm:text-lg font-medium xs:text-sm text-gray-300 hover:bg-gray-900 hover:text-white"
+            >Experiencia</a
+          >
+          <a
+            href="#projects"
+            class="rounded-full max-sm:px-2 px-4 py-2 sm:text-lg font-medium xs:text-sm text-gray-300 hover:bg-gray-900 hover:text-white"
+            >Proyectos</a
+          >
+          <a
+            href="#contact"
+            class="rounded-full max-sm:px-2 px-4 py-2 sm:text-lg font-medium xs:text-sm text-gray-300 hover:bg-gray-900 hover:text-white"
+            >Contacto</a
+          >
         </div>
       </div>
     </div>
@@ -35,7 +33,6 @@
 
   #navSections > a {
     transition: all 0.2s linear;
-    margin: 3px;
   }
 </style>
 
@@ -80,7 +77,7 @@
       currentSection = "";
     }
   };
-  
+
   isScrollY();
   window.addEventListener("scroll", isScrollY);
 </script>
